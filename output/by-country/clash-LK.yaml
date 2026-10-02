@@ -4,47 +4,47 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇲🇽 MX 01 - xiaohe
+- name: 🇱🇰 LK 01 - xiaohe
   type: vless
-  server: 131.196.252.97
+  server: trackydev.site
   port: 443
-  uuid: b1c31d36-c6b5-414b-88d2-9e24e7bfcca3
+  uuid: 92d67828-4c56-4795-af5a-f387651380dc
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: www.nihaoyun.top
+  servername: trackydev.site
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: www.nihaoyun.top
-- name: 🇲🇽 MX 02 - xiaohe
+      Host: trackydev.site
+- name: 🇱🇰 LK 02 - xiaohe
   type: vless
-  server: 131.196.252.66
+  server: trackydev.site
   port: 443
-  uuid: b1c31d36-c6b5-414b-88d2-9e24e7bfcca3
+  uuid: 92d67828-4c56-4795-af5a-f387651380dc
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: www.nihaoyun.top
+  servername: trackydev.site
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: www.nihaoyun.top
+      Host: trackydev.site
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇲🇽 MX 01 - xiaohe
-  - 🇲🇽 MX 02 - xiaohe
+  - 🇱🇰 LK 01 - xiaohe
+  - 🇱🇰 LK 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇲🇽 MX 01 - xiaohe
-  - 🇲🇽 MX 02 - xiaohe
+  - 🇱🇰 LK 01 - xiaohe
+  - 🇱🇰 LK 02 - xiaohe
 rules:
 - MATCH,PROXIES
