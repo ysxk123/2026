@@ -5,19 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇱 CL 01 - xiaohe
-  type: vless
-  server: 64.176.15.110
-  port: 2053
-  uuid: 04c808e2-0b59-47b0-a54b-32fc7ef1c902
+  type: ss
+  server: 64.176.2.21
+  port: 8388
+  cipher: aes-256-gcm
+  password: xBStBEVqvGwHPocc
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: free.cndyw.ggff.net
-  network: ws
-  ws-opts:
-    path: pyip=bpb.yousef.isegaro.comfp=random
-    headers:
-      Host: free.cndyw.ggff.net
 proxy-groups:
 - name: PROXIES
   type: select
