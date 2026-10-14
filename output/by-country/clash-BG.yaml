@@ -5,19 +5,15 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇧🇬 BG 01 - xiaohe
-  type: vless
-  server: 85.217.170.89
-  port: 443
-  uuid: b0a100ee-c397-43f2-bdae-2adfb7a0d4e5
+  type: vmess
+  server: 188.121.120.86
+  port: 42143
+  uuid: 874a6b6d-d569-4b64-b9a6-32d594e61325
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: rnxq-1lpi3m.linmeisoft.com
-  network: ws
-  ws-opts:
-    path: /b0a100ee-c397-43f2-bdae-2adfb7a0d4e5
-    headers:
-      Host: rnxq-1lpi3m.linmeisoft.com
 proxy-groups:
 - name: PROXIES
   type: select
