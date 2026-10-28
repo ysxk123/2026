@@ -1,0 +1,34 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
+  type: vless
+  server: saas.sin.fan
+  port: 443
+  uuid: 5d7b401c-78fa-4254-872e-6d42bf7e75ec
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: vp26.1145678.xyz
+  network: ws
+  ws-opts:
+    path: /trade/map/page/video/TkZDG0RVE1kPREsSEQ8YEEBHSEpZUwhIFF4WRBIIFUkVRQQQRhNYEFASC0FbR1ZETQ9cXUZAQ1laV0cXFBJEXFVfAlUHA1BUAEpYElFeVhQDWV0SQwEWQlpGWRoNA1IaBRk=
+    headers:
+      Host: vp26.1145678.xyz
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
+- name: AUTO
+  type: url-test
+  url: https://www.google.com/generate_204
+  interval: 300
+  proxies:
+  - 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
+rules:
+- MATCH,PROXIES
