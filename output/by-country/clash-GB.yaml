@@ -5,21 +5,25 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01 - xiaohe
-  type: vless
-  server: node-uk.connectsuite.org
-  port: 8443
-  uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: node-uk.connectsuite.org
-- name: 🇬🇧 英国 (United Kingdom) 02 - xiaohe
   type: ss
-  server: 141.98.101.178
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
+  server: 94.156.250.148
+  port: 7001
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
   udp: true
+- name: 🇬🇧 英国 (United Kingdom) 02 - xiaohe
+  type: vless
+  server: 57.129.132.223
+  port: 80
+  uuid: 9e20b04d-5a81-4e16-b421-01e502f0aac6
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vless/
+    headers:
+      Host: google.com
 - name: 🇬🇧 英国 (United Kingdom) 03 - xiaohe
   type: ss
   server: 198.244.201.129
@@ -28,69 +32,36 @@ proxies:
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
 - name: 🇬🇧 英国 (United Kingdom) 04 - xiaohe
-  type: vless
-  server: 104.25.5.52
+  type: ss
+  server: 82.38.31.165
   port: 443
-  uuid: 93fa8bdb-9cca-4a3e-8355-b7c12e4f595e
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
   udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: fornewiran.ade-1000.workers.dev
-  network: ws
-  ws-opts:
-    path: /vl/yLWNcuUuw1jlJpkDhGy?ed=2560
-    headers:
-      Host: fornewiran.ade-1000.workers.dev
 - name: 🇬🇧 英国 (United Kingdom) 05 - xiaohe
   type: vless
   server: 51.38.71.147
-  port: 443
-  uuid: fda89998-7e9a-4494-857a-cd0d00661b58
+  port: 8443
+  uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: uk1.connectsuite.org
-  network: ws
-  ws-opts:
-    path: /cdn-cgi/ws
-    headers:
-      Host: uk1.connectsuite.org
+  servername: node-uk.connectsuite.org
 - name: 🇬🇧 英国 (United Kingdom) 06 - xiaohe
-  type: ss
-  server: 185.176.206.9
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: 🇬🇧 英国 (United Kingdom) 07 - xiaohe
-  type: ss
-  server: 82.38.31.219
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  udp: true
-- name: 🇬🇧 英国 (United Kingdom) 08 - xiaohe
-  type: vless
-  server: 104.21.14.228
-  port: 443
-  uuid: 443b1e88-41fa-43bb-ff6c-982544254b74
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: wandering-river-cd33.mramezanian1375.workers.dev
-  network: ws
-  ws-opts:
-    path: /87fab74555d6e093
-    headers:
-      Host: wandering-river-cd33.mramezanian1375.workers.dev
-- name: 🇬🇧 英国 (United Kingdom) 09 - xiaohe
   type: ss
   server: 141.98.101.181
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: 🇬🇧 英国 (United Kingdom) 10 - xiaohe
+- name: 🇬🇧 英国 (United Kingdom) 07 - xiaohe
+  type: ss
+  server: 38.114.120.221
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: 🇬🇧 英国 (United Kingdom) 08 - xiaohe
   type: vmess
   server: 57.129.132.223
   port: 80
@@ -105,101 +76,51 @@ proxies:
     path: /vmess/
     headers:
       Host: google.com
-- name: 🇬🇧 英国 (United Kingdom) 11 - xiaohe
-  type: ss
-  server: 38.114.120.221
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: 🇬🇧 英国 (United Kingdom) 12 - xiaohe
-  type: vless
-  server: 51.38.71.147
-  port: 8443
-  uuid: c08f0056-7a6d-4931-813b-aaa3cdd00aed
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: node-uk.connectsuite.org
-- name: 🇬🇧 英国 (United Kingdom) 13 - xiaohe
+- name: 🇬🇧 英国 (United Kingdom) 09 - xiaohe
   type: ss
   server: 158.173.24.73
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: 🇬🇧 英国 (United Kingdom) 14 - xiaohe
-  type: vless
-  server: 8.6.112.0
-  port: 443
-  uuid: eac64826-e281-49c2-88bf-cd0078675b09
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: worker3.cexewob845.workers.dev
-  network: ws
-  ws-opts:
-    path: /Nu2VsE5wrioADb0C
-    headers:
-      Host: worker3.cexewob845.workers.dev
-- name: 🇬🇧 英国 (United Kingdom) 15 - xiaohe
-  type: vless
-  server: 51.38.71.147
-  port: 443
-  uuid: fda89998-7e9a-4494-857a-cd0d00661b58
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: uk1.connectsuite.org
-  network: ws
-  ws-opts:
-    path: /cdn-cgi/ws
-    headers:
-      Host: 51.38.71.147
-- name: 🇬🇧 英国 (United Kingdom) 16 - xiaohe
-  type: vless
-  server: 57.129.132.223
-  port: 80
-  uuid: 9e20b04d-5a81-4e16-b421-01e502f0aac6
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /vless/
-    headers:
-      Host: google.com
-- name: 🇬🇧 英国 (United Kingdom) 17 - xiaohe
+- name: 🇬🇧 英国 (United Kingdom) 10 - xiaohe
   type: ss
   server: 142.202.51.22
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: 🇬🇧 英国 (United Kingdom) 18 - xiaohe
+- name: 🇬🇧 英国 (United Kingdom) 11 - xiaohe
   type: ss
   server: 185.176.206.9
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
   udp: true
-- name: 🇬🇧 英国 (United Kingdom) 19 - xiaohe
+- name: 🇬🇧 英国 (United Kingdom) 12 - xiaohe
   type: ss
   server: 141.98.101.181
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
   udp: true
-- name: 🇬🇧 英国 (United Kingdom) 20 - xiaohe
+- name: 🇬🇧 英国 (United Kingdom) 13 - xiaohe
   type: ss
-  server: 94.156.250.148
-  port: 7001
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
+  server: 141.98.101.178
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
   udp: true
-- name: 🇬🇧 英国 (United Kingdom) 21 - xiaohe
+- name: 🇬🇧 英国 (United Kingdom) 14 - xiaohe
   type: ss
   server: 198.244.202.215
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+  udp: true
+- name: 🇬🇧 英国 (United Kingdom) 15 - xiaohe
+  type: ss
+  server: 185.176.206.9
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
@@ -224,12 +145,6 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 13 - xiaohe
   - 🇬🇧 英国 (United Kingdom) 14 - xiaohe
   - 🇬🇧 英国 (United Kingdom) 15 - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 16 - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 17 - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 18 - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 19 - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 20 - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 21 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -250,11 +165,5 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 13 - xiaohe
   - 🇬🇧 英国 (United Kingdom) 14 - xiaohe
   - 🇬🇧 英国 (United Kingdom) 15 - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 16 - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 17 - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 18 - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 19 - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 20 - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 21 - xiaohe
 rules:
 - MATCH,PROXIES
